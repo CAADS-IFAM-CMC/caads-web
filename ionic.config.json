@@ -1,0 +1,7 @@
+{
+  "name": "caads-ifam-cmc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
