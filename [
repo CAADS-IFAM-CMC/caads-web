@@ -25,7 +25,7 @@ Para clonar este repositório em sua pasta de desenvolvimento, siga os passos ab
 1. Execute o comando Git Clone com a URL ou SSH do repositório:
 
    ```
-   git clone URL ou SSH
+   git clone -b <nome_da_branch> --single-branch <URL_do_repositório>
    ```
 
    Substitua "URL ou SSH" pela URL ou SSH do repositório CAADS Web.
