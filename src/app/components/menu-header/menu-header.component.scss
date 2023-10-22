@@ -1,0 +1,54 @@
+// Anotação: Preciso criar um arquivo com estilizações padrões como o .container e as variáveis de cores
+
+@import '/src/styles/variables.scss';
+
+// Estilização da Header
+header {
+  padding: 1rem 0;
+}
+
+hr {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.2rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon svg {
+  fill: $primary-color;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+.redes-sociais svg {
+  margin-right: 1rem;
+}
+
+.icon a, svg{
+  font-size: 0.8rem;
+  color: $secondary-color;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+  // font-family: 'GFS Didot', serif;
+  // font-family: Arial, Helvetica, sans-serif;
+}
+
+ul, li a {
+  color: $secondary-color;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Quicksand", Arial;
+}
