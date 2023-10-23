@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu-header.component.html',
   styleUrls: ['./menu-header.component.scss']
 })
-export class MenuHeaderComponent implements OnInit {
+export class MenuHeaderComponent {
 
-  constructor() { }
+  isMenuVisible = true;
 
-  ngOnInit() {
+  toggleMenu() {
+    this.isMenuVisible = !this.isMenuVisible;
   }
-
 }
