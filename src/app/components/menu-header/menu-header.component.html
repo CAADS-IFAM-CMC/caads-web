@@ -94,12 +94,32 @@
 <hr />
 <nav>
   <div class="container navbar">
+    <div id="centralizar-logo"></div>
     <div class="logo">
-      <img src="assets/logo-caads.png" alt="Logo CAADS" width="100px" />
-      <img src="assets/logo-ifam-cmc.svg" alt="Logo IFAM-CMC">
+      <img
+        class="logo-caads"
+        src="assets/logo-caads.png"
+        alt="Logo CAADS"
+        width="100px"
+      />
+      <img id="logo-ifam" src="assets/logo-ifam-cmc.svg" alt="Logo IFAM-CMC" />
     </div>
-    <div>
-      <ul class="container menu">
+    <div class="hamburguer-icon">
+      <button (click)="toggleMenu()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 448 512"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="menu">
+      <ul class="container">
         <li>
           <a href="#"> Home </a>
         </li>
@@ -110,9 +130,119 @@
           <a href="#"> Quem Somos </a>
         </li>
         <li>
+          <a href="#"> Editais </a>
+        </li>
+        <li>
           <a href="#"> Contato </a>
         </li>
       </ul>
     </div>
+  </div>
+
+  <!-- Menu Sanduiche -->
+  <div [ngClass]="{ 'menu-left': isMenuVisible }" class="mobile-menu container">
+    <ul>
+      <li>
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+          <style>
+            svg {
+              fill: #000000;
+            }
+          </style>
+            <path
+              d="M5 22h14a2 2 0 0 0 2-2v-9a1 1 0 0 0-.29-.71l-8-8a1 1 0 0 0-1.41 0l-8 8A1 1 0 0 0 3 11v9a2 2 0 0 0 2 2zm5-2v-5h4v5zm-5-8.59 7-7 7 7V20h-3v-5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v5H5z"
+            ></path>
+          </svg>
+          Início
+        </a>
+      </li>
+      <li>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+        <style>
+          svg {
+            fill: #000000;
+          }
+        </style>
+          <path
+            d="M19 2H9c-1.103 0-2 .897-2 2v6H5c-1.103 0-2 .897-2 2v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2zM5 12h6v8H5v-8zm14 8h-6v-8c0-1.103-.897-2-2-2H9V4h10v16z"
+          ></path>
+          <path
+            d="M11 6h2v2h-2zm4 0h2v2h-2zm0 4.031h2V12h-2zM15 14h2v2h-2zm-8 .001h2v2H7z"
+          ></path>
+        </svg>
+        <a href="#"> Sobre </a>
+      </li>
+      <li>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+        <style>
+          svg {
+            fill: #000000;
+          }
+        </style>
+          <path
+            d="M16.604 11.048a5.67 5.67 0 0 0 .751-3.44c-.179-1.784-1.175-3.361-2.803-4.44l-1.105 1.666c1.119.742 1.8 1.799 1.918 2.974a3.693 3.693 0 0 1-1.072 2.986l-1.192 1.192 1.618.475C18.951 13.701 19 17.957 19 18h2c0-1.789-.956-5.285-4.396-6.952z"
+          ></path>
+          <path
+            d="M9.5 12c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2zm1.5 7H8c-3.309 0-6 2.691-6 6v1h2v-1c0-2.206 1.794-4 4-4h3c2.206 0 4 1.794 4 4v1h2v-1c0-3.309-2.691-6-6-6z"
+          ></path>
+        </svg>
+        <a href="#"> Quem Somos </a>
+      </li>
+      <li>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+        <style>
+          svg {
+            fill: #000000;
+          }
+        </style>
+          <path
+            d="M19.937 8.68c-.011-.032-.02-.063-.033-.094a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.99.99 0 0 0-.05-.258zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"
+          ></path>
+        </svg>
+        <a href="#"> Editais </a>
+      </li>
+      <li>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+        <style>
+          svg {
+            fill: #000000;
+          }
+        </style>
+          <path
+            d="M5 18v3.766l1.515-.909L11.277 18H16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h1zM4 8h12v8h-5.277L7 18.234V16H4V8z"
+          ></path>
+          <path
+            d="M20 2H8c-1.103 0-2 .897-2 2h12c1.103 0 2 .897 2 2v8c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2z"
+          ></path>
+        </svg>
+        <a href="#"> Contato </a>
+      </li>
+    </ul>
   </div>
 </nav>

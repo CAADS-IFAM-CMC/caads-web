@@ -15,6 +15,7 @@ header {
   max-width: 1200px;
   justify-content: space-between;
   margin: 0 auto; /* Adicionado para centralizar o conteúdo */
+  padding: 0 1rem;
 }
 
 .navbar {
@@ -62,6 +63,10 @@ hr {
   margin-right: 1.5rem;
 }
 
+.hamburguer-icon {
+  display: none;
+}
+
 // Estilização do Menu
 
 ul, li a {
@@ -72,4 +77,135 @@ ul, li a {
   text-decoration: none;
   font-weight: 500;
   font-family: "Quicksand", Arial;
+}
+
+// Closed Menu Smartphone
+.mobile-menu {
+  display: none;
+}
+
+#centralizar-logo {
+  display: none;
+}
+
+// Marcos de Responsividade
+// 1000px - Qubrar menus
+// 800px - Incluir navbar sanduiche
+// 400px - Retirar logos ou ajustá-las
+
+// Tablets
+@media (max-width: 1000px) {
+
+}
+
+// Smartphones
+@media (max-width: 450px) {
+  // Closed
+  header {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  hr {
+    display: none;
+  }
+
+  // Mobile Menu
+  .navbar {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid $tertiary-color;
+  }
+
+  // Estilização das Logos
+  .hamburguer-icon {
+    display: block;
+    z-index: 1;
+  }
+
+  .hamburguer-icon button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .hamburguer-icon svg{
+    font-size: 1.8rem;
+    fill: $tertiary-color;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  #logo-ifam {
+    display: none;
+  }
+
+  #logo-caads {
+    height: 32px;
+  }
+
+  .logo img{
+    margin-right: 0rem;
+  }
+
+  .logo {
+    display: flex;
+  }
+
+  #centralizar-logo {
+    display: block;
+  }
+
+  // ESTRUTURA
+  .mobile-menu {
+    background-color: $secondary-color;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    transition: right 0.3s ease;
+  }
+
+  .menu-left {
+    display: block;
+    right: 0;
+  }
+
+  .mobile-menu a{
+    color: $tertiary-color;
+    font-size: 1.5rem;
+  }
+
+  .mobile-menu ul li {
+    border: 1px solid;
+    border-radius: 12px;
+    margin: 10px 0;
+    padding: 12px 0;
+    text-align: center;
+    transition: background-color 0.1s ease;
+  }
+
+  .mobile-menu ul li a {
+    
+  }
+
+  .mobile-menu ul li:hover {
+    background-color: $primary-color;
+  }
+
+  .mobile-menu ul {
+    margin-top: 100px;
+  }
+
+  .mobile-menu svg {
+    fill: $tertiary-color;
+  }
 }
