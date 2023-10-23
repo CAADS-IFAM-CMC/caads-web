@@ -2,21 +2,30 @@
 
 @import '/src/styles/variables.scss';
 
-// Estilização da Header
+// Estilização da Estrutura da Header e NavBar
 header {
   padding: 1rem 0;
+}
+
+.flex, .container{
+  gap: 1.2rem;
+}
+
+.container {
+  max-width: 1200px;
+  justify-content: space-between;
+  margin: 0 auto; /* Adicionado para centralizar o conteúdo */
+}
+
+.navbar {
+  height: 80px;
 }
 
 hr {
   margin: 0;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 1.2rem;
-}
+// Estilização Icones Superiores
 
 .icon {
   display: flex;
@@ -26,11 +35,14 @@ hr {
 .icon svg {
   fill: $primary-color;
   font-size: 0.8rem;
+}
+
+.contato svg{
   margin-right: 0.5rem;
 }
 
 .redes-sociais svg {
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .icon a, svg{
@@ -42,6 +54,15 @@ hr {
   // font-family: 'GFS Didot', serif;
   // font-family: Arial, Helvetica, sans-serif;
 }
+
+// Estilização das Logos
+.logo img{
+  height: 64px;
+  width: auto;
+  margin-right: 1.5rem;
+}
+
+// Estilização do Menu
 
 ul, li a {
   color: $secondary-color;
