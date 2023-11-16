@@ -88,18 +88,15 @@ ul, li a {
   display: none;
 }
 
-// Marcos de Responsividade
-// 1000px - Qubrar menus
-// 800px - Incluir navbar sanduiche
-// 400px - Retirar logos ou ajustá-las
-
-// Tablets
-@media (max-width: 1000px) {
-
+// Tablets (Ipad Pro)
+@media (max-width: 1024px) {
+  .logo img{
+    height: 32px;
+  }
 }
 
 // Smartphones
-@media (max-width: 450px) {
+@media (max-width: 700px) {
   // Closed
   header {
     display: none;
