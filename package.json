@@ -11,11 +11,16 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.0",
+<<<<<<< HEAD
+    "@angular/cdk": "^16.2.12",
+=======
     "@angular/cdk": "^16.2.9",
+>>>>>>> 9bdd7324f686f50a4d465586b58c66f75f53ac4a
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
     "@angular/core": "^16.2.0",
     "@angular/forms": "^16.2.0",
+    "@angular/material": "^16.2.12",
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
